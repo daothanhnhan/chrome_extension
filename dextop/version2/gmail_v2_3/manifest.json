@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "gmail v2",
+	"version": "1.0.0.0",
+	"description": "A example browser action extension, không đăng nhập gmail",
+	"author": "truong quang tuan",
+	"browser_action": {
+		"default_title": "Use this to open popup"
+	},
+	"background": {
+		"scripts": ["background2.js"],
+		"persistent": false
+	},
+	"permissions": ["tabs","cookies", "http://cmsver01.webmienphi.org.vn/gmail/gmail.php", "http://cmsver01.webmienphi.org.vn/keyword/all-keyword.php", "*://*/"],
+	"content_scripts": [{
+		"matches": ["*://*/*"],
+		"js": ["content2.js"],
+		"css": ["content.css"]
+	}]
+}

@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "advert",
+	"version": "1.0.0.0",
+	"description": "chay xem quang cao",
+	"author": "truong quang tuan",
+	"browser_action": {
+		"default_title": "Use this to open popup"
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"permissions": ["browsingData","tabs"],
+	"content_scripts": [{
+		"matches": ["*://*/*"],
+		"js": ["content.js"],
+		"css": ["content.css"]
+	}]
+}

@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "gmail mobile v2",
+	"version": "1.0.0.0",
+	"description": "A example browser action extension",
+	"author": "truong quang tuan",
+	"browser_action": {
+		"default_title": "Use this to open popup"
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"permissions": ["tabs","http://cmsver01.webmienphi.org.vn/gmail/gmail.php", "http://cmsver01.webmienphi.org.vn/keyword/all-keyword.php"],
+	"content_scripts": [{
+		"matches": ["*://*/*"],
+		"js": ["content.js"],
+		"css": ["content.css"]
+	}]
+}

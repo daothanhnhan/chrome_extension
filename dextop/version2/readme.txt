@@ -1,0 +1,1 @@
+gmail v2 1 : chay không tuan tu, dùng duong link

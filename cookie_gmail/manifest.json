@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+	"name": "cookie gmail",
+	"version": "1.0.0.0",
+	"description": "A example browser action extension",
+	"author": "truong quang tuan",
+	"browser_action": {
+		"default_title": "Use this to open popup"
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+        {
+          "matches": ["*://*/*"],
+          "js": ["content.js"]
+        }
+    ],
+	"permissions": [
+	    "cookies",
+	    "https://www.youtube.com/",
+	    "*://www.youtube.com/",
+	    "tabs",
+	    "*://*/"
+	  ]
+}

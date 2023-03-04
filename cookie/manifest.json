@@ -1,0 +1,15 @@
+{
+	"manifest_version": 2,
+	"name": "cookie",
+	"version": "1.0.0.0",
+	"description": "A example browser action extension",
+	"author": "truong quang tuan",
+	"browser_action": {
+		"default_title": "Use this to open popup"
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"permissions": ["browsingData"]
+}
